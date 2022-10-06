@@ -1,0 +1,37 @@
+// css footer
+.footer{
+    padding-bottom: 120px;
+    background: $bg-cl;
+    .container{
+        display: flex;
+    }
+    &__left{
+        padding-right: 543px;
+        .para{
+            @include text(18px,gb,32px,$white-cl,normal);
+            max-width: 303px;
+            margin-top: 24px;
+        }
+        .privacy{
+            margin-top: 122px;
+            @include text(18px,gm,32px,$white-cl,normal);
+            opacity: 0.5;
+        }
+    }
+    &__right{
+        display: flex;
+        .blog{
+            &:first-child{
+                margin-right: 212px;
+            }
+            .heading{
+                @include text(24px,gb,32px,$yellow-cl,normal);
+                margin-bottom: 24px;
+            }
+            a{
+                @include text(18px,gm,32px,$white-cl,normal);
+
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+// css header
+.header{
+    position: fixed;
+    transform: translateY(64px);
+    z-index: 200;
+    background:transparent;
+    width: 100%;
+    .container-fluid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+    }
+    &__menu{
+       .menu{
+            @include mid($flex:true);
+            li{
+                a{
+                    @include text(18px,gb,22px,$white-cl,capitalize);
+                    @include transition($t);
+                    &:hover{
+                        color: $black-cl;
+                        @include transition($t);
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 40px;
+                }
+            }
+           
+       }
+    
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        a{
+            display: flex;
+            align-items: center
+        }
+        .btnacc{
+            @include text(18px,gb,22px,$white-cl,capitalize);
+            margin-left: 8px;
+            @include transition($t);
+            &:hover{
+                color: $black-cl;
+                @include transition($t);
+            }
+        }
+    }
+}

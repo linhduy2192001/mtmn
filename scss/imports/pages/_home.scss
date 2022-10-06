@@ -1,0 +1,98 @@
+.slider{
+    position: relative;
+    &__bg{
+        height: 100vh;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info{
+        .container-fluid{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 50%;
+            .social{
+                display: flex;
+                flex-direction: column;
+                .title{
+                    transform: rotate(90deg) translateX(-50%);
+                    display: flex;
+
+                }
+                .insta{
+                    margin: 24px 0px;
+                }
+            }
+            .slider__info-tab{
+                display: flex;
+                .choice{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    >a{
+                        @include text(18px,gb,22px,$white-cl,normal);
+                        height: 100%;
+                        position: relative;
+                        &:not(:last-child){
+                            margin-bottom: 40px;
+                        } 
+                        &:hover{
+                            &::after{
+                                position: absolute;
+                                content: "";
+                                height: 100%;
+                                width:2px;
+                                background: $white-cl;
+                                margin-left: 32px;
+                            }
+                        }
+                    }
+                
+                }
+                &::after{
+                    content:"";
+                    display: block;
+                    height: 100%;
+                    width:2px;
+                    background: $white-cl;
+                    opacity: 0.5;
+                    margin-left: 32px;
+                }
+            }
+        }
+    }
+
+}
+.dsc{
+    background: $bg-cl;
+    padding-top: 200px;
+    &__row{
+        padding-bottom: 200px;
+        display: flex;
+        justify-content: space-between  ;
+        &-img{
+            display: block;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height:100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+        &:nth-child(2){
+            flex-direction: row-reverse;
+            .textbox{
+                margin-left: 114px;
+                padding-right: initial;
+                
+            }
+           
+        }
+    }
+}
